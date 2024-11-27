@@ -1,0 +1,132 @@
+﻿@using System.Globalization
+@model List<CartItems>
+@{
+    var successMessage = TempData["OrderSuccessMessage"] as string;
+  
+
+}
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div class="alert alert-success">
+        @successMessage
+    </div>
+}
+
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<form method="post" action="@Url.Action("SetOrder", "Order")">
+    <div class="container bootstrap snippets bootdey">
+        <div class="col-md-9 col-sm-8 content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-info panel-shadow">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Description</th>
+                                            <th>Qty</th>
+                                            <th>Price</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td><img src="/Images/@item.ImageUrl" class="img-cart" width="40px" height="30px"></td>
+                                                <td><strong>@item.ProudctName</strong></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-sm btn-success" onclick="updateQuantity(@item.ProudctId, true)">+</button>
+                                                    <span id="quantity-@item.ProudctId">@item.Quantity</span>
+                                                    <button type="button" class="btn btn-sm btn-danger" onclick="updateQuantity(@item.ProudctId, false)">-</button>
+                                                </td>
+                                                <td data-price="@item.Price">@item.Price.ToString("C", new CultureInfo("en-EG"))</td>
+                                                @{
+                                                    var total = item.Price * item.Quantity;
+                                                }
+                                                <td id="total-@item.ProudctId">@total.ToString("C", new CultureInfo("en-EG"))</td>
+                                            </tr>
+                                        }
+                                        <tr>
+                                            <td colspan="4" class="text-right"><strong>Total</strong></td>
+                                            <td id="grand-total">@ViewBag.totalprice.ToString("C", new CultureInfo("en-EG"))</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <a asp-action="Index" asp-controller="Proudct" class="btn btn-success">
+                        <i class="glyphicon glyphicon-arrow-left"></i>&nbsp;Continue Shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+        </div>
+    </div>
+</form>
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Hide the alert after 3 seconds
+        setTimeout(function () {
+            $('.alert').fadeOut('slow');
+        }, 3000);
+    });
+
+    function updateQuantity(itemId, isIncreasing) {
+        const change = isIncreasing ? 1 : -1;
+
+        $.ajax({
+            url: '@Url.Action("UpdateQuantity", "CartMangmet")', // Ensure this points to the correct controller
+            type: 'POST',
+            data: { id: itemId, change: change },
+            success: function (response) {
+                if (response.success) {
+                    // Update quantity display
+                    $('#quantity-' + itemId).text(response.newQuantity);
+
+                    // Retrieve the price per item from the data attribute
+                    const pricePerItem = parseFloat($(`#total-${itemId}`).siblings('[data-price]').data('price'));
+                    const newQuantity = response.newQuantity;
+                    const newTotal = pricePerItem * newQuantity;
+
+                    // Update the total price display for this item
+                    $('#total-' + itemId).text(newTotal.toLocaleString('en-EG', { style: 'currency', currency: 'EGP' }));
+
+                    // Update the grand total
+                    updateGrandTotal();
+                } else {
+                    alert('Failed to update quantity.'); // Handle failure case
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error updating quantity:', error);
+                alert('There was an error updating the quantity. Please try again.'); // Show error alert
+            }
+        });
+    }
+
+    function updateGrandTotal() {
+        let grandTotal = 0;
+
+        // Iterate through each item total
+        $('td[id^="total-"]').each(function () {
+            const itemTotal = parseFloat($(this).text().replace(/[^0-9.-]+/g, "")); // Remove currency format
+            grandTotal += itemTotal;
+        });
+
+        // Update the grand total display
+        $('#grand-total').text(grandTotal.toLocaleString('en-EG', { style: 'currency', currency: 'EGP' }));
+    }
+</script>
+ 
