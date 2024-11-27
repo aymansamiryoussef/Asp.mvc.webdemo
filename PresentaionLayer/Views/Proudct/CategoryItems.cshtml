@@ -1,0 +1,28 @@
+﻿@using System.Globalization;
+@{
+    
+    @model List<Proudct>
+}
+
+<div class="container">
+    <div class="row">
+        @foreach (Proudct item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <!-- Each product will take 4 out of 12 columns (so 3 products per row) -->
+                <div class="card" style="width: 18rem;">
+                    <img src="/Images/@item.ImageUrl" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5> <!-- Display product name -->
+                        <p class="card-text">Price: @item.Price.ToString("C", new CultureInfo("en-EG"))</p> <!-- English numerals with EGP -->
+
+                        <p class="card-text">@item.Description</p>
+                        <p class="card-text">@item.Stockquantity</p>
+                        <!-- Display Category Name -->
+                        
+                       </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

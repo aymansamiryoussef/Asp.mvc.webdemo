@@ -1,0 +1,103 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WEBDEMO
+build_property.RootNamespace = WEBDEMO
+build_property.ProjectDir = D:\c#\WEBDEMO\WEBDEMO\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\c#\WEBDEMO\WEBDEMO
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Account/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/CartMangmet/CartView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydE1hbmdtZXRcQ2FydFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Category/ADDCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQUREQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Category/CategoryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnlMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Proudct/addproudct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdWRjdFxhZGRwcm91ZGN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Proudct/adminProudct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdWRjdFxhZG1pblByb3VkY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Proudct/CategoryItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdWRjdFxDYXRlZ29yeUl0ZW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Proudct/PROUDCTS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdWRjdFxQUk9VRENUUy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Proudct/UpdateView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdWRjdFxVcGRhdGVWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Proudct/_PartialProudctView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdWRjdFxfUGFydGlhbFByb3VkY3RWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Shared/_nav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9uYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/WEBDEMO/WEBDEMO/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-v4q7869jss
